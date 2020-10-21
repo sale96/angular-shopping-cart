@@ -3,6 +3,7 @@
      display: flex;
      justify-content: center;
      box-shadow: 2px 2px 6px #777;
+     margin: 3px;
 
      .product-item-left {
           width: 40%;
@@ -35,5 +36,11 @@
                     font-size: 1.9rem;
                }
           }
+     }
+
+     .btn {
+          margin: 10px;
+          width: 200px;
+          height: 40px;
      }
 }
