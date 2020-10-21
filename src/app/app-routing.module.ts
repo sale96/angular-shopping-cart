@@ -4,7 +4,7 @@ import { CartComponent } from './components/store/cart/cart.component';
 import { ProductContainerComponent } from './components/store/product-container/product-container.component';
 
 const routes: Routes = [
-  { path: '/', component: ProductContainerComponent},
+  { path: '', component: ProductContainerComponent},
   { path: 'cart', component: CartComponent }
 ];
 
