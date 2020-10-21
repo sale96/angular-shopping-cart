@@ -18,4 +18,8 @@ export class ProductComponent implements OnInit {
   addToCart($event): void {
     this.item.emit(this.product);
   }
+
+  getAllCartItems() {
+    
+  }
 }
