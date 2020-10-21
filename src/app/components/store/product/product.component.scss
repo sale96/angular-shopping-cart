@@ -1,0 +1,39 @@
+.product-item {
+     width: 25%;
+     display: flex;
+     justify-content: center;
+     box-shadow: 2px 2px 6px #777;
+
+     .product-item-left {
+          width: 40%;
+
+          img {
+               width: 100%;
+          }
+     }
+
+     .product-item-right {
+          width: 60%;
+
+          .product-item-title, .product-item-price-wrapper {
+               width: 100%;
+               padding: 10px;
+          }
+
+          .product-item-title {
+               font-size: 1.5rem;
+               border-bottom: 1px solid #eee;
+          }
+
+          .product-item-price-wrapper {
+               .product-item-price-title {
+                    font-size: 1.6rem;
+                    color: green;
+               }
+
+               .product-item-price {
+                    font-size: 1.9rem;
+               }
+          }
+     }
+}
