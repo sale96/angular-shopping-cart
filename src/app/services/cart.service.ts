@@ -6,7 +6,8 @@ import { ProductModel } from '../models/ProductModel';
   providedIn: 'root'
 })
 export class CartService {
-  cartItems: Array<CartProductModel>;
+  cartItems: Array<CartProductModel> = new Array<CartProductModel>();
+
   constructor() { }
 
   getAllCartItems(): Array<CartProductModel> {
@@ -15,9 +16,14 @@ export class CartService {
 
   addToCart(product: ProductModel) {
     let cartItem = new CartProductModel();
-
-    cartItem.quantity = 1;
-    cartItem.product = product;
-    this.cartItems.push(cartItem);
+    cartItem.productName = product.name;
+    cartItem.productId = product.id;
+    
+    if (this.cartItems.find(x => x.productId == product.id)) {
+      this.cartItems.find(x => x.productId == product.id).quantity++;
+    } else {
+      cartItem.quantity = 1;
+      this.cartItems.push(cartItem);
+    }
   }
 }
