@@ -9,6 +9,10 @@ export class CartService {
   cartItems: Array<CartProductModel>;
   constructor() { }
 
+  getAllCartItems(): Array<CartProductModel> {
+    return this.cartItems;
+  }
+
   addToCart(product: ProductModel) {
     let cartItem = new CartProductModel();
 
