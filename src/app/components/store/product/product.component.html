@@ -1,13 +1,14 @@
-<div class="product-item">
-     <div class="product-item-left">
-          <img src="{{ product.image }}" alt="{{ product.name }}">
-     </div>
-     <div class="product-item-right">
-          <h3 class="product-item-title">{{ product.name }}</h3>
-          <p class="product-item-price-wrapper"> 
-               <span class="product-item-price-title">Price: </span>
-               <span class="product-item-price">{{ product.price }}</span>
-          </p>
-          <button (click)="addToCart($event)" class="btn">Add to cart</button>
+<div class="card mb-3" style="max-width: 540px;">
+     <div class="row no-gutters">
+          <div class="col-md-4">
+               <img src="{{ product.image }}" class="card-img" alt="{{ product.name }}">
+          </div>
+          <div class="col-md-8">
+               <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <button (click)="addToCart($event)" class="btn btn-primary">Add to cart</button>
+               </div>
+          </div>
      </div>
 </div>
