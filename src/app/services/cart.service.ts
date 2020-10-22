@@ -18,6 +18,7 @@ export class CartService {
     let cartItem = new CartProductModel();
     cartItem.productName = product.name;
     cartItem.productId = product.id;
+    cartItem.price = product.price;
     
     if (this.cartItems.find(x => x.productId == product.id)) {
       this.cartItems.find(x => x.productId == product.id).quantity++;

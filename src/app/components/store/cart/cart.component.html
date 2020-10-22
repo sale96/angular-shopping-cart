@@ -1,10 +1,36 @@
 <div class="cart container">
-     <h1>Cart</h1>
+     <h1 class="mb-5">Cart</h1>
 
-     <ul>
-          <li *ngFor="let item of getAllCartItems()">
-               <div>{{ item.productName }}</div>
-               <div>Quantity: {{ item.quantity }}</div>
-          </li>
-     </ul>
+     <table class="table">
+          <thead>
+               <tr>
+                    <th>
+                         Id
+                    </th>
+                    <th>
+                         Product name
+                    </th>
+                    <th>
+                         Price
+                    </th>
+                    <th>
+                         Quantity
+                    </th>
+                    <th>
+                         Sum
+                    </th>
+               </tr>
+          </thead>
+          <tbody>
+               <tr *ngFor="let cartItem of getAllCartItems()">
+                    <td>{{ cartItem.productId }}</td>
+                    <td>{{ cartItem.productName }}</td>
+                    <td>{{ cartItem.price }}</td>
+                    <td>{{ cartItem.quantity }}</td>
+                    <td>
+                         {{ cartItem.quantity * cartItem.price }}
+                    </td>
+               </tr>
+          </tbody>
+     </table>
 </div>
