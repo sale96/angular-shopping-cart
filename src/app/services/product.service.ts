@@ -20,8 +20,8 @@ export class ProductService {
     },
     {
       id: 3,
-      name: "Alcatel One",
-      price: 3333,
+      name: "Samsung",
+      price: 23423,
       image: "http://placehold.it/250x250"
     },
   ];
