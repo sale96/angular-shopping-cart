@@ -23,5 +23,5 @@
           <div class="col-1 p-2">
           </div>
      </div>
-     <app-cart-item></app-cart-item>
+     <app-cart-item *ngFor="let item of getAllCartItems()" [item]="item"></app-cart-item>
 </div>
