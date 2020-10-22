@@ -1,4 +1,4 @@
-<div class="cart container">
+<div *ngIf="getAllCartItems().length > 0; else elseBlock" class="cart container">
      <h1 class="mb-5">Cart</h1>
      <div class="row border-bottom font-weight-bold text-center">
           <div class="col-2 p-1">
@@ -25,3 +25,6 @@
      </div>
      <app-cart-item *ngFor="let item of getAllCartItems()" [item]="item"></app-cart-item>
 </div>
+<ng-template #elseBlock>
+     <h1 class="container text-center">Your shopping cart is empty</h1>
+</ng-template>
