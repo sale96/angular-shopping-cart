@@ -23,4 +23,8 @@ export class CartItemComponent implements OnInit {
     this.cartService.changeQuantity(this.item.productId, 'asc');
   }
 
+  deleteItem(event): void {
+    this.cartService.deleteCartItem(this.item.productId);
+  }
+
 }

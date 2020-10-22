@@ -23,6 +23,6 @@
           {{ item.quantity * item.price }}
      </div>
      <div class="col-1 p-2">
-          <button class="btn btn-danger"> Delete </button>
+          <button (click)="deleteItem($event)" class="btn btn-danger"> Delete </button>
      </div>
 </div>
